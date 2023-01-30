@@ -6,7 +6,6 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm'
-
 import { User } from '../../users/entities/User'
 
 @Entity('games')
@@ -14,7 +13,7 @@ export class Game {
   @PrimaryGeneratedColumn('uuid')
   id: string
 
-  @Column()
+  @Column('text', { nullable: false })
   title: string
 
   @ManyToMany(() => User, (user) => user.games)

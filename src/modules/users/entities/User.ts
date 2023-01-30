@@ -15,13 +15,13 @@ export class User {
   @PrimaryGeneratedColumn('uuid')
   id: string
 
-  @Column()
+  @Column('text', { nullable: false })
   first_name: string
 
-  @Column()
+  @Column('text', { nullable: false })
   last_name: string
 
-  @Column()
+  @Column('text', { nullable: false, unique: true })
   email: string
 
   @ManyToMany(() => Game, (game) => game.users)
