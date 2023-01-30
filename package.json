@@ -8,8 +8,10 @@
     "test": "jest"
   },
   "devDependencies": {
+    "@rocketseat/eslint-config": "^1.2.0",
     "@types/jest": "^26.0.21",
     "@types/node": "^14.14.35",
+    "eslint": "^8.33.0",
     "jest": "^26.6.3",
     "ts-jest": "^26.5.4",
     "ts-node": "^9.1.1",
