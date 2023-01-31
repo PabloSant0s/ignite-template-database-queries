@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import {
   Connection,
   createConnection,
@@ -119,7 +120,6 @@ describe('Repositories', () => {
 
   it('[UsersRepository] should be able to list users ordered by first name', async () => {
     const users = await usersRepository.findAllUsersOrderedByFirstName()
-
     expect(users).toEqual([
       expect.objectContaining({
         first_name: 'Daniele',
@@ -168,6 +168,8 @@ describe('Repositories', () => {
     const result1 = await gamesRepository.findByTitleContaining('of u')
     const result2 = await gamesRepository.findByTitleContaining('eed')
     const result3 = await gamesRepository.findByTitleContaining('rocket league')
+
+    console.log(result1)
 
     expect(result1).toEqual([
       expect.objectContaining({
